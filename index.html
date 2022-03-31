@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <title>Formulaire véhicule</title>
+</head>
+
+<body>
+    <section id="bg"></section>
+    <div class="block_grid">
+        <div id="form_block">
+
+
+            <form id="formulaire">
+                <h2>Bon de commande d'un véhicule</h2>
+                <fieldset>
+                    <label for="date">Date du bon de commande : </label>
+                    <input id="date" type="date" name="date" required />
+                </fieldset>
+
+                <fieldset>
+                    <label for="type">Type de véhicule : </label>
+                    <input id="type" type="text" value="Voiture" required disabled />
+                </fieldset>
+
+                <fieldset>
+                    <label for="marque">marque du véhicule : </label>
+                    <select id="marque" required>
+                        <option name="marque" value="Peugeot">Peugeot</option>
+                        <option name="marque" value="Renault">Renault</option>
+                        <option name="marque" value="Citroën">Citroën</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="couleur">Couleur du véhicule : </label>
+                    <input id="couleur" type="color" required />
+                </fieldset>
+
+                <fieldset>
+                    <span>Option : </span>
+                    <div id="options">
+                        <div class="couple">
+                            <input id="VE" type="radio" value="Vitres électriques" name="option" required checked />
+                            <label for="VE">Vitres électriques</label>
+                        </div>
+                        <div class="couple">
+                            <input id="GPS" type="radio" value="GPS" name="option" required />
+                            <label for="GPS">GPS</label>
+                        </div>
+                        <div class="couple">
+                            <input id="PM" type="radio" value="Peintures métalisée" name="option" required />
+                            <label for="PM">Peintures métalisée</label>
+                        </div>
+                        <div class="couple">
+                            <input id="CD" type="radio" value="Lecteur CD" name="option" required />
+                            <label for="CD">Lecteur CD</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <button id="envoyer" type="submit">Valider le bon de commande</button>
+                </fieldset>
+            </form>
+
+            <div class="recap">
+                <h2>Récapitulatif</h2>
+                <p>Date : <span id="aff_date"> </span></p>
+                <p>Type de véhicule : <span id="aff_type"> </span></p>
+                <p>Marque : <span id="aff_marque"> </span></p>
+                <p>Couleur : <span id="aff_couleur"> </span></p>
+                <p>Option : <span id="aff_option"> </span></p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
